@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OpenAIE 视觉模块 使用说明文档 &mdash; OpenAIE_Docs OpenAIE documention 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Welcome to OpenAIE_Docs’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenAIE_Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">OpenAIE视觉模块使用</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OpenAIE 视觉模块 使用说明文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">入门使用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1. 驱动安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2. 软件使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3. 案例测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">板载功能使用教程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#led">1. 板载LED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2. 板载按键</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">3. 语音识别</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">9. 摄像头</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">更多案例</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenAIE_Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>OpenAIE 视觉模块 使用说明文档</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="openaie">
+<h1>OpenAIE 视觉模块 使用说明文档<a class="headerlink" href="#openaie" title="永久链接至标题">¶</a></h1>
+<blockquote>
+<div><p>OpenAIE 视觉模块</p>
+</div></blockquote>
+<div class="section" id="id1">
+<h2>简介<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>供电方式：USB TypeC（DC: 5V）</p></li>
+<li><p>处理器: STM32H741VIT6，ARM® 32-bit Cortex®-M7 CPU，480MHz(1027 DMIPS)</p></li>
+<li><p>存储：1MB RAM，2 MB flash.</p></li>
+<li><p>图像传感器：30万像素彩色摄像头</p></li>
+<li><dl class="simple">
+<dt>应用：</dt><dd><ul>
+<li><ol class="arabic simple">
+<li><p>颜色追踪</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>形状检测（圆形，矩形）</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>二维码识别</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>AprilTag 标记追踪</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>等</p></li>
+</ol>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="id2">
+<h2>入门使用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>点击下载
+<a class="reference external" href="https://pan.baidu.com/s/1aj5JFqdzW-t58mJ5YncZFw">相关资料</a>
+提取码：3qo0 。</p>
+<div class="section" id="id4">
+<h3>1. 驱动安装<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>模块通过 USB 连接电脑通信，通常情况下模块连接电脑会自动安装驱动，安装驱动后，将鼠标移动到我的电脑，右键属性–&gt;设备管理器–&gt;端口(COM和LPT)，可查看到设备连接信息，如下图所示：</p>
+<div class="figure align-default">
+<img alt="_images/连接设备.png" src="_images/连接设备.png" />
+</div>
+<p>若电脑没有自动安装驱动，则需要自己进行手动安装，请遵循以下步骤进行安装</p>
+</div>
+<div class="section" id="id5">
+<h3>2. 软件使用<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>软件界面介绍</p>
+<div class="figure align-default">
+<img alt="_images/软件界面介绍.png" src="_images/软件界面介绍.png" />
+</div>
+</div>
+<div class="section" id="id6">
+<h3>3. 案例测试<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>如下图所示，输入或复制示例程序到程序编辑框内，点击“运行”，观察。</p>
+<div class="figure align-default">
+<img alt="_images/案例测试.png" src="_images/案例测试.png" />
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id7">
+<h2>板载功能使用教程<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="section" id="led">
+<h3>1. 板载LED<a class="headerlink" href="#led" title="永久链接至标题">¶</a></h3>
+<p>板载一颗RGB LED
+API</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+<span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>示例1：点亮LED</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">openaie</span> <span class="k">import</span> <span class="n">led</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>2. 板载按键<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>按下接低电平，弹起接高电平。
+API:</p>
+<blockquote>
+<div><p>button.is_pressed()
+获取按键当前状态，返回的结果是 True：按键被按下；或者是 False: 按键未被按下。</p>
+</div></blockquote>
+<p>示例1：按键控制开关灯</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">openaie</span> <span class="k">import</span> <span class="o">*</span>
+<span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;press&quot;</span><span class="p">)</span>
+                        <span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
+                <span class="k">while</span> <span class="p">(</span><span class="n">button</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">())</span> <span class="p">:</span>
+                        <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>3. 语音识别<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>非特定人语音识别</p>
+<p>添加识别关键词</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#str：设别语句的拼音</span>
+<span class="c1">#ret: 识别到关键词时的返回值</span>
+<span class="n">asr</span><span class="o">.</span><span class="n">add_cmd</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">ret</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>开始运行</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">asr</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>读取识别结果</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">asr</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>安静的环境中可获得较大的识别准确率</p>
+</div>
+<p>示例1：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">openaie</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">asr</span><span class="o">.</span><span class="n">add_cmd</span><span class="p">(</span><span class="s2">&quot;hong&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>          <span class="c1"># 添加关键词“红”，编号为“1”。</span>
+<span class="n">asr</span><span class="o">.</span><span class="n">add_cmd</span><span class="p">(</span><span class="s2">&quot;lv&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>            <span class="c1"># 添加关键词“绿”，编号为“2”。</span>
+<span class="n">asr</span><span class="o">.</span><span class="n">add_cmd</span><span class="p">(</span><span class="s2">&quot;lan&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>           <span class="c1"># 添加关键词“蓝”，编号为“3”。</span>
+<span class="n">asr</span><span class="o">.</span><span class="n">add_cmd</span><span class="p">(</span><span class="s2">&quot;kai deng&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>      <span class="c1"># 添加关键词“开灯”，编号为“4”。</span>
+<span class="n">asr</span><span class="o">.</span><span class="n">add_cmd</span><span class="p">(</span><span class="s2">&quot;guan deng&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>     <span class="c1"># 添加关键词“关灯”，编号为“5”。</span>
+<span class="n">asr</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>                                       <span class="c1"># 开始识别</span>
+
+<span class="k">def</span> <span class="nf">asr_test</span><span class="p">(</span><span class="n">sel</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">:</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">:</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">5</span> <span class="p">:</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">green</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+                <span class="n">led</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">asr_test</span><span class="p">(</span><span class="n">asr</span><span class="o">.</span><span class="n">get_res</span><span class="p">())</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>9. 摄像头<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>原理
+传感器参数
+200万像素(OV2640)</p>
+<p>API</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 重置并初始化摄像头</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">reset</span><span class="p">([</span><span class="n">freq</span><span class="o">=</span><span class="mi">24000000</span><span class="p">,</span> <span class="n">set_regs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dual_buff</span><span class="o">=</span><span class="kc">False</span><span class="p">])</span>
+
+<span class="c1"># 启动或关闭捕获图像功能</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span>
+
+<span class="c1"># 设置帧大小 VGA, QVGA</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_framesize</span><span class="p">(</span><span class="n">framesize</span><span class="p">[,</span> <span class="n">set_regs</span><span class="o">=</span><span class="kc">True</span><span class="p">])</span>
+
+<span class="c1"># 设置帧格式 RGB565</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_pixformat</span><span class="p">(</span><span class="nb">format</span><span class="p">[,</span> <span class="n">set_regs</span><span class="o">=</span><span class="kc">True</span><span class="p">])</span>
+
+<span class="c1"># 拍照</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">snapshot</span><span class="p">()</span>
+
+<span class="c1"># 关闭摄像头/切换摄像头</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">enable</span><span class="o">/</span><span class="n">select</span><span class="p">)</span>
+
+<span class="c1"># 跳帧</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">skip_frames</span><span class="p">([</span><span class="n">n</span><span class="p">,</span><span class="n">time</span><span class="p">])</span>
+
+<span class="c1"># 对比度</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_contrast</span><span class="p">(</span><span class="n">contrast</span><span class="p">)</span>
+
+<span class="c1"># 亮度</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_brightness</span><span class="p">(</span><span class="n">brightness</span><span class="p">)</span>
+
+<span class="c1"># 饱和度</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_saturation</span><span class="p">(</span><span class="n">saturation</span><span class="p">)</span>
+
+<span class="c1"># 自动增益</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_auto_gain</span><span class="p">(</span><span class="n">enable</span><span class="p">,</span><span class="n">gain_db</span><span class="p">)</span>
+
+<span class="c1"># 垂直镜像</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_hmirror</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>示例1：字符串，图片显示</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">openaie</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id11">
+<h2>更多案例<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to OpenAIE_Docs’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, loki
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
